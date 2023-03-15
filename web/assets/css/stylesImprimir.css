@@ -1,0 +1,47 @@
+/* José Miguel Feixas Galdeano - Curso 22/23 */
+
+/* Etiquetas HTML */
+
+body {
+    background-color: white;
+    color: black !important;
+}
+
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* id */
+
+#sidebar {
+    display: none;
+}
+
+#webLogo {
+    left: 40vw;
+    position: absolute;
+    visibility: visible;
+    width: 10vw;
+}
+
+/* class */
+
+.core {
+    grid-template-columns: 100%;
+}
+
+.footer {
+    display: none;
+}
+
+.header {
+    visibility: hidden;
+}
+
+.scientistInfo {
+    background-color: white;
+}
+
+.socialBox {
+    display: none;
+}
