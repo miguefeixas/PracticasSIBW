@@ -1,9 +1,9 @@
-const openCommentsButton = document.getElementById("openCommentsButton");
-const comments = document.getElementById("commentsSidebar");
-
+/*let openCommentsButton = document.getElementById("openCommentsButton");
+let comments = document.getElementById("commentsSidebar");*/
 
 function openNav() {
-    comments.style.display = "block";
+    document.getElementById("commentsSidebar").style.display = "block";
 };
 
-openCommentsButton.onclick = function(){openNav()};
+document.getElementById("openCommentsButton").onclick = function(){openNav()};
+
