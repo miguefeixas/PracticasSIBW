@@ -43,6 +43,24 @@ html {
     margin-top: -1px;
 }
 
+#closeComments {
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+#commentsSidebar {
+    background-color: greenyellow;
+    display: none;
+    height: 100%;
+    left: 75%;
+    overflow: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 #contactInformation {
     color: white;
     font-style: normal;
@@ -111,6 +129,20 @@ html {
     width: 60%;
 }
 
+#watchCommentsButton {
+    align-self: center;
+    background-color: #7798ab;
+    border: none;
+    color: white;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#watchCommentsButton:active {
+    background-color: #557d94;
+}
+
 #webLogo {
     padding: 2em;
     width: 80%;
@@ -131,6 +163,16 @@ html {
 }
 
 /* class */
+
+.comment {
+    margin-bottom: max(20px, 0.5vw);
+}
+
+.commentsSection {
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
 
 .core {
     display: grid;
@@ -270,3 +312,7 @@ html {
     margin-right: 50px;
     width: 3vw;
 }
+
+
+
+

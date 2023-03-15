@@ -58,6 +58,7 @@
                     <a href="cientifico_imprimir.html">
                         <img class="socials" src="./assets/images/Imprimir.png" alt="Botón de imprimir">
                     </a>
+                    <button id="watchCommentsButton" onclick="openNav()">Ver comentarios</button>
                 </div>
             </article>
             <div id="sidebar">
@@ -81,6 +82,33 @@
                 </div>
             </div>
         </main>
+
+        <div id="commentsSidebar">
+            <div class="commentsSection">
+                <button id="closeComments"" onclick="closeNav()">X</button>
+                <h2>Comentarios</h2>
+                <div id="comments">
+                    <div id="comment1" class="comment">
+                        <p>Nombre1</p>
+                        <p>00:00 - 01/01/2023</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div id="comment2" class="comment">
+                        <p>Nombre2</p>
+                        <p>00:00 - 01/01/2023</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <h3>Añade un comentario:</h3>
+                <form id="commentForm">
+                    <input type="text" id="authorName" name="authorName" value="Nombre"><br>
+                    <input type="text" id="authorEmail" name="authorEmail" value="Correo electrónico"><br>
+                    <input type="text" id="commentText" name="commentText" value="Escribe tu comentario..."><br>
+                    <input type="submit" value="Enviar">
+                </form>
+              </div>
+        </div>
+        
         <div class="footer">
             <br><br>
             <span id="footerName"><span id="bold">Con</span>Ciencia</span>
@@ -90,5 +118,18 @@
                 <a href="mailto:miguelfeixas@correo.ugr.es">miguelfeixas@correo.ugr.es</a>
             </address>
         </div>
+
+
+        <script>
+            function openNav() {
+              document.getElementById("commentsSidebar").style.display = "block";
+              //document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("commentsSidebar").style.display = "none";
+            }
+            </script>
+
     </body>
 </html>
