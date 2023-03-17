@@ -43,22 +43,78 @@ html {
     margin-top: -1px;
 }
 
-#closeComments {
-    background-color: white;
+#closeCommentsButton {
+    background-color: #7798ab00;
+    border-style: none;
+    border-radius: 3px;
+    font-size: 2em;
+    font-weight: bold;
     margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+#closeCommentsButton:active {
+    background-color: #557d94;
+}
+
+#closeCommentsButton:hover {
+    background-color: #557d9455;
+}
+
+#commentForm button {
+    background-color: #7798ab;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: max(0.8vw, 1em);
+    font-weight: bold;
+    padding: 5px;
+}
+
+#commentForm input, textarea {
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none none groove none;
+    border-width: 3px;
+    font-size: max(1vw, 1.2em);
+    margin-bottom: 8px;
+}
+
+#commentText {
+    width: 20vw;
+}
+
+#commentTextArea {
+    background-color: rgba(255, 255, 255, 0);
+    height: 5vw;
+    width: 20vw;
 }
 
 #commentsSidebar {
-    background-color: greenyellow;
+    background-color: #ebe2c7;
     display: none;
     height: 100%;
     left: 75%;
     overflow: auto;
-    overflow-x: hidden;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+}
+
+#commentsSidebar h3 {
+    font-size: 2.3em;
+    width: 21vw;
+}
+
+#commentsSidebar hr {
+    margin-left: -1px;
+    width: 21vw;
+}
+
+#commentsSidebar p {
+    font-size: max(1vw, 1.2em);
+    text-align: justify;
+    width: 21vw;
 }
 
 #contactInformation {
@@ -169,7 +225,7 @@ html {
 }
 
 .commentsSection {
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 30px;
 
 }

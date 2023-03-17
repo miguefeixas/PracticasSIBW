@@ -86,13 +86,13 @@
 
         <div id="commentsSidebar">
             <div class="commentsSection">
-                <button id="closeComments"" onclick="closeNav()">X</button>
-                <h2>Comentarios</h2>
+                <button id="closeCommentsButton">x</button>
+                <h3>Comentarios</h2>
                 <div id="comments">
                     <div id="comment1" class="comment">
                         <p>Nombre1</p>
                         <p>00:00 - 01/01/2023</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel consectetur est, a luctus purus. Mauris suscipit magna gravida tincidunt facilisis. Nunc aliquet ullamcorper quam in interdum. Pellentesque ac arcu euismod, tristique urna id, egestas nibh. Mauris elementum est eget nisi auctor suscipit. Nunc sollicitudin lectus in nisl vehicula, vitae egestas neque sodales.</p>
                     </div>
                     <div id="comment2" class="comment">
                         <p>Nombre2</p>
@@ -100,12 +100,14 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
+                <hr>
                 <h3>Añade un comentario:</h3>
                 <form id="commentForm">
-                    <input type="text" id="authorName" name="authorName" value="Nombre"><br>
-                    <input type="text" id="authorEmail" name="authorEmail" value="Correo electrónico"><br>
-                    <input type="text" id="commentText" name="commentText" value="Escribe tu comentario..."><br>
-                    <input type="submit" value="Enviar">
+                    <input type="text" id="authorName" name="authorName" placeholder="Nombre"><br>
+                    <input type="text" id="authorEmail" name="authorEmail" placeholder="Correo electrónico"><br>
+                    <input type="textarea" id="commentText" name="commentText" placeholder="Escribe tu comentario..."><br>
+                    <textarea id="commentTextArea" name="commentText" placeholder="Escribe tu comentario..."></textarea><br>
+                    <button id="sendCommentButton">Enviar comentario</button>
                 </form>
               </div>
         </div>
