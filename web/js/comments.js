@@ -4,16 +4,16 @@
  * Declaración de variables para guardar elementos del DOM
  */
 
-let openCommentsButton = document.getElementById("openCommentsButton");
-let closeCommentsButton = document.getElementById("closeCommentsButton");
-let sendCommentButton = document.getElementById("sendCommentButton");
-let commentsSidebar = document.getElementById("commentsSidebar");
-let comments = document.getElementById("comments");
-let authorEmail = document.getElementById("authorEmail");
-let authorName = document.getElementById("authorName");
-let commentTextArea = document.getElementById("commentTextArea");
-let reEmail = /\S+@\S+\.\S+/;
-let reBadWords = /imb[é,e]cil|est[ú,u]pid[o,a]|subnormal|malnacid[o,a]/gi;
+const openCommentsButton = document.getElementById("openCommentsButton");
+const closeCommentsButton = document.getElementById("closeCommentsButton");
+const sendCommentButton = document.getElementById("sendCommentButton");
+const commentsSidebar = document.getElementById("commentsSidebar");
+const comments = document.getElementById("comments");
+const authorEmail = document.getElementById("authorEmail");
+const authorName = document.getElementById("authorName");
+const commentTextArea = document.getElementById("commentTextArea");
+const reEmail = /\S+@\S+\.\S+/;
+const reBadWords = /imb[é,e]cil|est[ú,u]pid[o,a]|tont[o,a]|subnormal|malnacid[o,a]/gi;
 
 /**
  * Declaración de funciones
@@ -26,6 +26,12 @@ function openComments() {
 function closeComments() {
     commentsSidebar.style.display = "none";
 };
+
+function clearFields() {
+    authorName.value = "";
+    authorEmail.value = "";
+    commentTextArea.value = "";
+}
 
 function addComment() {
     let timestamp = new Date();
@@ -46,6 +52,8 @@ function addComment() {
         </div>
         `
     } 
+
+    clearFields();
 };
 
 function checkValidEmail(email) {
@@ -57,8 +65,22 @@ function checkFields() {
 };
 
 function checkBadWords() {
-    // TODO
-}
+    let text = commentTextArea.value;
+    // https://stackoverflow.com/questions/42236181/iterating-through-words-in-a-string
+    let words = text.split(" ");
+
+    if(reBadWords.test(words)) {
+        let badWordLength;
+        var replacement = "";
+        words.map(word => {
+            if (reBadWords.test(word))
+                badWordLength = word.length;
+        });
+        for (var i = 0; i < badWordLength; i += 1)
+            replacement += "*";
+        commentTextArea.value = text.replace(reBadWords, replacement);
+    }
+};
 
 /**
  * Funcionalidades
