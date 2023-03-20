@@ -46,8 +46,8 @@ function addComment() {
         // Enviar comentario
         comments.innerHTML += `
         <div class="comment">
-            <p>${ authorName.value }</p>
-            <p>${ time } - ${ date }</p>
+            <p class="name">${ authorName.value }</p>
+            <p class="date">${ time } - ${ date }</p>
             <p>${ commentTextArea.value }</p>
         </div>
         `
