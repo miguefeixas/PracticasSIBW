@@ -196,6 +196,10 @@ html {
     font-weight: bold;
 }
 
+#openCommentsButton:hover, #sendCommentButton:hover {
+    opacity: 0.8;
+}
+
 #watchCommentsButton:active {
     background-color: #557d94;
 }

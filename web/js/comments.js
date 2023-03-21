@@ -14,6 +14,8 @@ const authorName = document.getElementById("authorName");
 const commentTextArea = document.getElementById("commentTextArea");
 const reEmail = /\S+@\S+\.\S+/;
 const reBadWords = /imb[é,e]cil|est[ú,u]pid[o,a]|tont[o,a]|subnormal|malnacid[o,a]/gi;
+// g: hace una búsqueda global, no para después del primer match
+// i: no distingue entre mayus y minus
 
 /**
  * Declaración de funciones
@@ -51,9 +53,9 @@ function addComment() {
             <p>${ commentTextArea.value }</p>
         </div>
         `
-    } 
-
-    clearFields();
+        // Se limpian los campos tras enviar el comentario
+        clearFields();
+    }
 };
 
 function checkValidEmail(email) {
@@ -71,12 +73,14 @@ function checkBadWords() {
 
     if(reBadWords.test(words)) {
         let badWordLength;
-        var replacement = "";
+        let replacement = "";
+        // Recorremos las palabras hasta encontrar la que se censura y obtenemos su longitud
+        // con una función de callback.
         words.map(word => {
             if (reBadWords.test(word))
                 badWordLength = word.length;
         });
-        for (var i = 0; i < badWordLength; i += 1)
+        for (let i = 0; i < badWordLength; i += 1)
             replacement += "*";
         commentTextArea.value = text.replace(reBadWords, replacement);
     }
